@@ -1,0 +1,153 @@
+@media (min-width: 770px) {
+  .table .row {
+    padding-left: 15px;
+  }
+}
+
+body {
+  height: 100%;
+  background-image: url(assets/img/dark-background.jpg);
+}
+
+#root {
+  margin: 0 auto 70px auto;
+  color: rgba(255, 255, 255, 0.54);
+  max-width: 800px;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main-title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.date-title {
+  margin: 30px 0 15px 0;
+}
+
+.date-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fa-plus {
+  margin: 30px 0 15px 0;
+  font-size: 26px;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+.table .row {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.54);
+  border-width: 2px 2px 0px 2px;
+  background-color: #2828285e;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table .row:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.table .row:last-of-type {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.54);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.table .row .change-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table .row .change-date select {
+  color: rgba(255, 255, 255, 0.54);
+  background-color: #313131;
+}
+
+.table .row .checkbox {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.54);
+  border: 1px solid rgba(19, 19, 19, 0.61);
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.table .row .checkbox:checked {
+  background-color: rgba(19, 19, 19, 0.61);
+}
+
+.table .row .checkbox:hover {
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form .input-field {
+  padding-left: 5px;
+  height: 31px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid rgba(19, 19, 19, 0.61);
+}
+
+.table-input {
+  padding-left: 5px;
+  height: 30px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgba(19, 19, 19, 0.61);
+  color: rgba(255, 255, 255, 0.54);
+  background-color: #2828285e;
+}
+
+.button-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.delete-text {
+  font-weight: 600;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */

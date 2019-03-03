@@ -1,0 +1,136 @@
+$checkbox-color: rgba(19, 19, 19, 0.61);
+$border-color: rgba(255, 255, 255, 0.54);
+$text-color: rgba(255, 255, 255, 0.54);
+$row-background-color: #2828285e;
+$table-radius: 10px;
+
+@media (min-width: 770px) {
+  .table {
+    .row {
+      padding-left: 15px;
+    }
+  }
+}
+
+body {
+  height: 100%;
+  background-image: url(assets/img/dark-background.jpg);
+}
+
+#root {
+  margin: 0 auto 70px auto;
+  color: $text-color;
+  max-width: 800px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.main-title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.date-title {
+  margin: 30px 0 15px 0;
+}
+
+.date-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.fa-plus {
+  margin: 30px 0 15px 0;
+  font-size: 26px;
+}
+
+.table {
+  margin-top: 10px;
+
+  .row {
+    border-style: solid;
+    border-color: $border-color;
+    border-width: 2px 2px 0px 2px;
+    background-color: $row-background-color;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      border-top-left-radius: $table-radius;
+      border-top-right-radius: $table-radius;
+    }
+
+    &:last-of-type {
+      border-bottom: 2px solid $border-color;
+      border-bottom-left-radius: $table-radius;
+      border-bottom-right-radius: $table-radius;
+    }
+
+    .change-date {
+      display: flex;
+      justify-content: center;
+
+      select {
+        color: $text-color;
+        background-color: rgb(49, 49, 49);
+      }
+    }
+
+    .checkbox {
+      -webkit-appearance: none;
+      background-color: $text-color;
+      border: 1px solid $checkbox-color;
+      padding: 7px;
+      border-radius: 50%;
+
+      &:checked {
+        background-color: $checkbox-color;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .input-field {
+    padding-left: 5px;
+    height: 31px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid $checkbox-color;
+  }
+}
+
+.table-input {
+  padding-left: 5px;
+  height: 30px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid $checkbox-color;
+  color: $text-color;
+  background-color: $row-background-color;
+}
+
+.button-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-text {
+  font-weight: 600;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
