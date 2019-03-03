@@ -5,6 +5,19 @@ const pino = require('express-pino-logger')();
 const app = express();
 const mongoose = require('mongoose');
 const Item = require('./models/item');
+const path = require('path');
+const port = process.env.PORT || 8080;
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/ping', function (req, res) {
+ return res.send('pong');
+});
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 mongoose.connect('mongodb://localhost/items', { useNewUrlParser: true });
 const db = mongoose.connection;
@@ -19,10 +32,6 @@ db.on('error', err => {
 
 app.use(bodyParser.json());
 app.use(pino);
-
-app.get('/', (req, res) => {
-  res.send('Hello world!');
-});
 
 app.get('/api/items', (req, res) => {
   Item.find()
@@ -92,7 +101,6 @@ app.delete('/api/items/:id', (req, res) => {
   });
 });
 
-const port = 3007;
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
