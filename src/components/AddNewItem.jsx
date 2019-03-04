@@ -15,11 +15,11 @@ class AddNewItem extends Component {
 
   render() {
     return (
-      <div className="date-title-wrapper">
+      <span className="date-title-wrapper">
         <h4 className="date-title">{this.props.title}</h4>
         <div className="spacer" />
         <i className="fas fa-plus" onClick={this.handleSubmit} />
-      </div>
+      </span>
     );
   }
 }
