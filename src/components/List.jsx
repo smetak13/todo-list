@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchItems } from '../actions/postActions';
 import Table from './Table';
+import AddNewItem from './AddNewItem'
 
 class List extends Component {
   state = {};
@@ -13,6 +14,7 @@ class List extends Component {
   render() {
     return (
       <div>
+        <AddNewItem title="" />
         <Table
           title="Today"
           items={this.props.items

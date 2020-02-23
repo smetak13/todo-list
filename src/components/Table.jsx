@@ -4,7 +4,6 @@ import DeleteItem from './DeleteItem';
 import EditItem from './EditItem';
 import ChangeMode from './ChangeMode';
 import ChangeDate from './ChangeDate';
-import AddNewItem from './AddNewItem';
 
 class Table extends Component {
   state = {
@@ -24,12 +23,7 @@ class Table extends Component {
     } else {
       return (
         <div className="table">
-          {this.props.title === 'Today' ? (
-            <AddNewItem title={this.props.title} />
-          ) : (
-            <h4 className="date-title">{this.props.title}</h4>
-          )}
-
+          <h4 className="date-title">{this.props.title}</h4>
           {this.props.items.map(item => (
             <div className="row" key={item._id}>
               <div className="col-1">
